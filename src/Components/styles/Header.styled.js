@@ -6,3 +6,5 @@ export const Nav = styled.nav`
   justify-content: space-between;
   margin: 40px;
 `;
+
+export const Logo = styled.img``;
