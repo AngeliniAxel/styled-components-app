@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledCard } from '../styles/StyledCard.styled';
 
-const Card = ({ title, body, image }) => {
+const Card = ({ id, title, body, image }) => {
   return (
-    <StyledCard>
+    <StyledCard layout={id % 2 === 0 && 'row-reverse'}>
       <div>
         <h2> {title} </h2>
         <p> {body} </p>

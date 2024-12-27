@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import { Container } from './Components/styles/Container.styled';
 import GlobalStyles from './Components/styles/Global.styled';
 import Card from './Components/Card/Card';
+import { content } from './utils/content';
 
 const theme = {
   colors: {
@@ -20,27 +21,16 @@ function App() {
       <GlobalStyles />
       <Header />
       <Container>
-        <Card
-          title={'Novedades'}
-          body={
-            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
-          }
-          image={'illustration-flowing-conversation.svg'}
-        />
-        <Card
-          title={'Novedades'}
-          body={
-            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
-          }
-          image={'illustration-flowing-conversation.svg'}
-        />
-        <Card
-          title={'Novedades'}
-          body={
-            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
-          }
-          image={'illustration-flowing-conversation.svg'}
-        />
+        {content.map((item) => {
+          return (
+            <Card
+              id={item.id}
+              title={item.title}
+              body={item.body}
+              image={item.image}
+            />
+          );
+        })}
       </Container>
       <Footer />
     </ThemeProvider>
