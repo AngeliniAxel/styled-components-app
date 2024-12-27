@@ -3,6 +3,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import { Container } from './Components/styles/Container.styled';
 import GlobalStyles from './Components/styles/Global.styled';
+import Card from './Components/Card/Card';
 
 const theme = {
   colors: {
@@ -18,7 +19,29 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header />
-      <Container></Container>
+      <Container>
+        <Card
+          title={'Novedades'}
+          body={
+            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
+          }
+          image={'illustration-flowing-conversation.svg'}
+        />
+        <Card
+          title={'Novedades'}
+          body={
+            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
+          }
+          image={'illustration-flowing-conversation.svg'}
+        />
+        <Card
+          title={'Novedades'}
+          body={
+            'Esto es una descripcion de una tarjeta que esta saliendo excelente'
+          }
+          image={'illustration-flowing-conversation.svg'}
+        />
+      </Container>
       <Footer />
     </ThemeProvider>
   );
